@@ -1,5 +1,7 @@
 require_relative './config/environment'
 require 'sinatra/activerecord/rake'
+ActiveRecord::Base.logger = Logger.new(STDOUT)
+
 
 desc 'Start our app console' 
 task :console do
